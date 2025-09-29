@@ -1,0 +1,1026 @@
+{
+  "by_bib": {
+    "154": 1,
+    "206": 2,
+    "43": 3,
+    "223": 4,
+    "272": 5,
+    "81": 6,
+    "144": 7,
+    "145": 8,
+    "211": 9,
+    "35": 10,
+    "56": 11,
+    "231": 12,
+    "124": 13,
+    "47": 14,
+    "60": 15,
+    "291": 16,
+    "17": 17,
+    "186": 18,
+    "169": 19,
+    "90": 20,
+    "262": 21,
+    "240": 22,
+    "150": 23,
+    "160": 24,
+    "229": 25,
+    "134": 26,
+    "282": 27,
+    "287": 28,
+    "294": 29,
+    "21": 30,
+    "55": 31,
+    "255": 32,
+    "179": 33,
+    "32": 34,
+    "228": 35,
+    "201": 36,
+    "99": 37,
+    "257": 38,
+    "10": 39,
+    "83": 40,
+    "31": 41,
+    "170": 42,
+    "98": 43,
+    "69": 44,
+    "6": 45,
+    "97": 46,
+    "1783": 47,
+    "5": 48,
+    "234": 49,
+    "39": 50,
+    "143": 51,
+    "259": 52,
+    "245": 53,
+    "109": 54,
+    "62": 55,
+    "19": 56,
+    "121": 57,
+    "29": 58,
+    "146": 59,
+    "9": 60,
+    "61": 61,
+    "40": 62,
+    "132": 63,
+    "213": 64,
+    "70": 65,
+    "138": 66,
+    "175": 67,
+    "285": 68,
+    "136": 69,
+    "267": 70,
+    "275": 71,
+    "278": 72,
+    "247": 73,
+    "256": 74,
+    "3": 75,
+    "147": 76,
+    "153": 77,
+    "63": 78,
+    "187": 79,
+    "216": 80,
+    "181": 81,
+    "82": 82,
+    "49": 83,
+    "221": 84,
+    "53": 85,
+    "239": 86,
+    "258": 87,
+    "48": 88,
+    "59": 89,
+    "159": 90,
+    "183": 91,
+    "260": 92,
+    "164": 93,
+    "64": 94,
+    "244": 95,
+    "271": 96,
+    "135": 97,
+    "22": 98,
+    "16": 99,
+    "266": 100,
+    "274": 101,
+    "197": 102,
+    "198": 103,
+    "281": 104,
+    "167": 105,
+    "243": 106,
+    "224": 107,
+    "264": 108,
+    "174": 109,
+    "92": 110,
+    "237": 111,
+    "232": 112,
+    "171": 113,
+    "12": 114,
+    "180": 115,
+    "196": 116,
+    "95": 117,
+    "172": 118,
+    "126": 119,
+    "8": 120,
+    "111": 121,
+    "30": 122,
+    "283": 123,
+    "34": 124,
+    "78": 125,
+    "119": 126,
+    "77": 127,
+    "251": 128,
+    "116": 129,
+    "265": 130,
+    "68": 131,
+    "28": 132,
+    "38": 133,
+    "235": 134,
+    "2": 135,
+    "277": 136,
+    "80": 137,
+    "88": 138,
+    "85": 139,
+    "280": 140,
+    "199": 141,
+    "137": 142,
+    "108": 143,
+    "50": 144,
+    "72": 145,
+    "74": 146,
+    "217": 147,
+    "230": 148,
+    "270": 149,
+    "105": 150,
+    "297": 151,
+    "226": 152,
+    "155": 153,
+    "158": 154,
+    "269": 155,
+    "66": 156,
+    "279": 157,
+    "227": 158,
+    "94": 159,
+    "57": 160,
+    "25": 161,
+    "129": 162,
+    "127": 163,
+    "89": 164,
+    "26": 165,
+    "76": 166,
+    "176": 167,
+    "93": 168,
+    "191": 169,
+    "284": 170,
+    "106": 171,
+    "86": 172,
+    "162": 173,
+    "122": 174,
+    "101": 175,
+    "102": 176,
+    "166": 177,
+    "36": 178,
+    "33": 179,
+    "161": 180,
+    "168": 181,
+    "113": 182,
+    "215": 183,
+    "188": 184,
+    "120": 185,
+    "51": 186,
+    "7": 187,
+    "252": 188,
+    "209": 189,
+    "79": 190,
+    "290": 191,
+    "194": 192,
+    "157": 193,
+    "37": 194,
+    "204": 195,
+    "14": 196,
+    "214": 197,
+    "42": 198,
+    "298": 199,
+    "103": 200,
+    "189": 201,
+    "225": 202,
+    "289": 203,
+    "288": 204,
+    "200": 205,
+    "163": 206,
+    "273": 207,
+    "128": 208,
+    "238": 209,
+    "123": 210,
+    "178": 211,
+    "296": 212,
+    "67": 213,
+    "236": 214,
+    "107": 215,
+    "71": 216,
+    "165": 217,
+    "202": 218,
+    "219": 219,
+    "13": 220,
+    "133": 221,
+    "205": 222,
+    "96": 223,
+    "130": 224,
+    "212": 225,
+    "58": 226,
+    "65": 227,
+    "254": 228,
+    "156": 229,
+    "293": 230,
+    "4": 231,
+    "104": 232,
+    "117": 233,
+    "75": 234,
+    "184": 235,
+    "193": 236,
+    "242": 237,
+    "54": 238,
+    "11": 239,
+    "46": 240,
+    "110": 241,
+    "112": 242,
+    "220": 243,
+    "15": 244,
+    "185": 245,
+    "263": 246,
+    "152": 247,
+    "45": 248,
+    "24": 249,
+    "118": 250,
+    "253": 251,
+    "203": 252,
+    "173": 253,
+    "241": 254,
+    "87": 255,
+    "182": 256,
+    "268": 257,
+    "27": 258,
+    "292": 259,
+    "248": 260,
+    "52": 261,
+    "23": 262,
+    "286": 263,
+    "100": 264,
+    "295": 265,
+    "250": 266,
+    "208": 267,
+    "207": 268,
+    "192": 269,
+    "195": 270,
+    "299": 271,
+    "249": 272,
+    "210": 273,
+    "261": 274,
+    "1": 275,
+    "246": 276,
+    "115": 277
+  },
+  "by_name": {
+    "stefano ghenda": [
+      1
+    ],
+    "francesco d agostino": [
+      2
+    ],
+    "alessio bisogno": [
+      3
+    ],
+    "domenico liberatore": [
+      4
+    ],
+    "francesco chiaverini": [
+      5
+    ],
+    "gabriele colantonio": [
+      6
+    ],
+    "giampiero carosella": [
+      7
+    ],
+    "giuseppe di bucci": [
+      8
+    ],
+    "sergio serraiocco": [
+      9
+    ],
+    "domenico barbierato": [
+      10
+    ],
+    "matteo battistella": [
+      11
+    ],
+    "runcard fidal": [
+      12,
+      112,
+      134
+    ],
+    "niccolo cocciaglia": [
+      13
+    ],
+    "lorenzo lana": [
+      14
+    ],
+    "umberto d agostino": [
+      15
+    ],
+    "fabrizio di vincenzo": [
+      16
+    ],
+    "filippo taricani": [
+      17
+    ],
+    "gaetano presutti": [
+      18
+    ],
+    "i lupi d abruzzo": [
+      19,
+      42,
+      93,
+      118,
+      151,
+      181
+    ],
+    "asd podistica vasto": [
+      20,
+      40,
+      82,
+      137,
+      138,
+      139,
+      164,
+      172,
+      255
+    ],
+    "daniele cericola": [
+      21
+    ],
+    "cameron morgan mcgoverin": [
+      22
+    ],
+    "silvio alberti": [
+      23
+    ],
+    "manuel di gregorio": [
+      24
+    ],
+    "luca ciavarra": [
+      25
+    ],
+    "atletica solidale": [
+      26,
+      97
+    ],
+    "gioele lizza": [
+      27
+    ],
+    "alessandro dellarolle": [
+      28
+    ],
+    "francois tricarico": [
+      29
+    ],
+    "andrea d aversa": [
+      30
+    ],
+    "asd pallano outdoor": [
+      31,
+      85,
+      144,
+      186,
+      238,
+      261
+    ],
+    "fabio malandra": [
+      32
+    ],
+    "nicola gentile": [
+      33
+    ],
+    "asd atletica vomano": [
+      34
+    ],
+    "daniele ciavarra": [
+      35
+    ],
+    "antonio d angelo": [
+      36
+    ],
+    "salvatore marchegiano": [
+      37
+    ],
+    "alessandro micomonaco": [
+      38
+    ],
+    "alessandro di biase": [
+      39
+    ],
+    "pasqualino santucci": [
+      41
+    ],
+    "leonardo de bellis": [
+      43
+    ],
+    "asd podisti frentani": [
+      44,
+      65,
+      131,
+      156,
+      213,
+      216
+    ],
+    "francesco noviello": [
+      45
+    ],
+    "maurizio d angelo": [
+      46
+    ],
+    "valerio facciolo": [
+      47
+    ],
+    "gianluca di cicco": [
+      48
+    ],
+    "carlo di meco": [
+      49
+    ],
+    "renato d ottavio": [
+      50
+    ],
+    "francesco barletta": [
+      51
+    ],
+    "samuele napolione": [
+      52
+    ],
+    "lorella buzzelli": [
+      53
+    ],
+    "leonardo di giacomo": [
+      54
+    ],
+    "gabriele de cerchio": [
+      55
+    ],
+    "vanessa covizzi": [
+      56
+    ],
+    "atletica cairatese": [
+      57
+    ],
+    "atletica val tavo": [
+      58,
+      66,
+      122,
+      142,
+      165
+    ],
+    "free runners isernia": [
+      59
+    ],
+    "jean destephen": [
+      60
+    ],
+    "david de cerchio": [
+      61
+    ],
+    "giovanni orsatti": [
+      62
+    ],
+    "daniele turilli": [
+      63
+    ],
+    "alessandro butti": [
+      64
+    ],
+    "mario denterino": [
+      67
+    ],
+    "podistica solidarieta": [
+      68
+    ],
+    "atletica tusculum": [
+      69
+    ],
+    "runners lanciano": [
+      70,
+      130,
+      259
+    ],
+    "sara di prinzio": [
+      71
+    ],
+    "erika di cecco": [
+      72
+    ],
+    "andrea di cicco": [
+      73
+    ],
+    "pierluigi pretara": [
+      74
+    ],
+    "roberto marchetto": [
+      75
+    ],
+    "giuseppe montariello": [
+      76
+    ],
+    "damiano angelucci": [
+      77
+    ],
+    "pierluigi di camillo": [
+      78
+    ],
+    "gianmarco angelucci": [
+      79
+    ],
+    "ortona for runners": [
+      80,
+      147,
+      177,
+      217
+    ],
+    "davide micolucci": [
+      81
+    ],
+    "adolfo fantini": [
+      83
+    ],
+    "podistica cepagatti": [
+      84
+    ],
+    "runners casalbordino": [
+      86,
+      209,
+      237
+    ],
+    "marco napolione": [
+      87
+    ],
+    "florindo petaccia": [
+      88
+    ],
+    "francesco cascella": [
+      89
+    ],
+    "daniele di florio": [
+      90
+    ],
+    "filippo pellicciotta": [
+      91
+    ],
+    "nicola piscioneri": [
+      92
+    ],
+    "diamante di vincenzo": [
+      94
+    ],
+    "valerio angelucci": [
+      95
+    ],
+    "antonella sabatini": [
+      96
+    ],
+    "simone baronio": [
+      98
+    ],
+    "christian scutti": [
+      99
+    ],
+    "lorenzo tenaglia": [
+      100
+    ],
+    "camilla colaizzo": [
+      101
+    ],
+    "antonio di berardino": [
+      102
+    ],
+    "nicolino celli": [
+      103
+    ],
+    "marco prodon": [
+      104
+    ],
+    "claudia pasquale": [
+      105
+    ],
+    "marilena aceto": [
+      106
+    ],
+    "felice fiorini": [
+      107
+    ],
+    "michele fattibene": [
+      108
+    ],
+    "alessandra cazzato": [
+      109
+    ],
+    "francesco di martino": [
+      110
+    ],
+    "silvio spinelli": [
+      111
+    ],
+    "antonio tarantini": [
+      113
+    ],
+    "enrico salvi": [
+      114
+    ],
+    "giuseppe lazzaro": [
+      115
+    ],
+    "vittoriano gelsumino": [
+      116
+    ],
+    "lorella bassani": [
+      117
+    ],
+    "raffaele di campli": [
+      119
+    ],
+    "antonio del pizzo": [
+      120
+    ],
+    "biase liberato": [
+      121
+    ],
+    "mauro covarelli": [
+      123
+    ],
+    "giovanni aruffo": [
+      124
+    ],
+    "gianluca paone": [
+      125
+    ],
+    "giuseppe miccoli": [
+      126
+    ],
+    "gennaro lauritano": [
+      127
+    ],
+    "roberta fedele": [
+      128
+    ],
+    "anselmo d alessandro": [
+      129
+    ],
+    "emanuele maggiore": [
+      132
+    ],
+    "nicola di cecco": [
+      133
+    ],
+    "matteo martino": [
+      135
+    ],
+    "pescara marathon": [
+      136
+    ],
+    "rodolphe allandrieu": [
+      140
+    ],
+    "mirco agostinone": [
+      141
+    ],
+    "maurizio di campli": [
+      143
+    ],
+    "monica anna sara bosica": [
+      145
+    ],
+    "fabrizio pavone": [
+      146
+    ],
+    "enrica colonnello": [
+      148
+    ],
+    "gabriele cacciatore": [
+      149
+    ],
+    "jhonny d agostino": [
+      150
+    ],
+    "gerardo boccia": [
+      152
+    ],
+    "maria ciarlatani": [
+      153
+    ],
+    "domenico di biase": [
+      154,
+      192
+    ],
+    "running free pescara": [
+      155
+    ],
+    "mauro pingiotti": [
+      157
+    ],
+    "roberto triola": [
+      158
+    ],
+    "franco giurastante": [
+      159
+    ],
+    "katuscia bertotto": [
+      160
+    ],
+    "giorgio agostinone": [
+      161
+    ],
+    "pietro piergrossi": [
+      162
+    ],
+    "atletica rapino": [
+      163,
+      210
+    ],
+    "alessandra volpi": [
+      166
+    ],
+    "michela di fiore": [
+      167
+    ],
+    "lelio di sciascio": [
+      168
+    ],
+    "luigi zinni": [
+      169
+    ],
+    "maria pia lorusso": [
+      170
+    ],
+    "fabrizio camagna": [
+      171
+    ],
+    "domenico giammarino": [
+      173
+    ],
+    "giulia di federico": [
+      174
+    ],
+    "maruska alessandrelli": [
+      175
+    ],
+    "stefano alessandrelli": [
+      176
+    ],
+    "antonio cocco": [
+      178
+    ],
+    "asd cicciano running": [
+      179
+    ],
+    "giampiero fantini": [
+      180
+    ],
+    "renato rugo": [
+      182
+    ],
+    "fabrizio butti": [
+      183
+    ],
+    "domenico buccella": [
+      184
+    ],
+    "emiliano sant eusanio": [
+      185
+    ],
+    "antonio liberatore": [
+      187
+    ],
+    "roberto giansante": [
+      188
+    ],
+    "giuseppe panunzio": [
+      189
+    ],
+    "giorgia candeloro": [
+      190
+    ],
+    "chiara minella": [
+      191
+    ],
+    "diego di battista": [
+      193
+    ],
+    "carlo de vitis": [
+      194
+    ],
+    "marco gazzola": [
+      195
+    ],
+    "roberto persico": [
+      196
+    ],
+    "francesca di muzio": [
+      197
+    ],
+    "luigi vesperini": [
+      198
+    ],
+    "anna maria mucci": [
+      199
+    ],
+    "andrea congiu": [
+      200
+    ],
+    "ferdinando d angelo": [
+      201
+    ],
+    "anna felicita polsinelli": [
+      202
+    ],
+    "tiziano di prata": [
+      203
+    ],
+    "italo fortunato": [
+      204
+    ],
+    "vincenzo d amato": [
+      205
+    ],
+    "antonio magnacca": [
+      206
+    ],
+    "asd atletica runtime": [
+      207
+    ],
+    "camillo michelli": [
+      208
+    ],
+    "francesca d onofrio": [
+      211
+    ],
+    "paola filosofi": [
+      212
+    ],
+    "fabio sirolli": [
+      214
+    ],
+    "simona fontana": [
+      215
+    ],
+    "luigi fecondo": [
+      218
+    ],
+    "podistica alternativa": [
+      219,
+      243
+    ],
+    "runners pescara": [
+      220,
+      225
+    ],
+    "fatos cakmakyurdu": [
+      221
+    ],
+    "giancarlo girosante": [
+      222
+    ],
+    "piergiuseppe bassani": [
+      223
+    ],
+    "pierluigi pinto": [
+      224
+    ],
+    "svitlana buzdygan": [
+      226
+    ],
+    "sebastiano fantini": [
+      227
+    ],
+    "runners chieti": [
+      228,
+      264,
+      265,
+      274
+    ],
+    "giuseppina cinalli": [
+      229
+    ],
+    "marie-virginie tricarico": [
+      230
+    ],
+    "diego farinacci": [
+      231
+    ],
+    "maria cristina di meco": [
+      232
+    ],
+    "gianna d alicandro": [
+      233
+    ],
+    "bruno pisciella": [
+      234
+    ],
+    "domenico polidori": [
+      235
+    ],
+    "samuele alberti": [
+      236
+    ],
+    "filiberto pasquale": [
+      239
+    ],
+    "chiarina d alonzo": [
+      240
+    ],
+    "patrizia di primio": [
+      241
+    ],
+    "massimo nasuti": [
+      242
+    ],
+    "fabrizia porreca": [
+      244
+    ],
+    "luca zucchetto": [
+      245
+    ],
+    "pantaleone d aversa": [
+      246
+    ],
+    "simone cugini": [
+      247
+    ],
+    "mario arcieri": [
+      248
+    ],
+    "gianluigi piccirilli": [
+      249
+    ],
+    "emiliana fata": [
+      250
+    ],
+    "moreno dirlene gomes": [
+      251
+    ],
+    "angelica gazzola": [
+      252
+    ],
+    "tonia buzzelli": [
+      253
+    ],
+    "emiliana marocco": [
+      254
+    ],
+    "loredana nasuti": [
+      256
+    ],
+    "pantaleone valente": [
+      257
+    ],
+    "chris sarra": [
+      258
+    ],
+    "luigi di filippantonio": [
+      260
+    ],
+    "giovanni mattucci": [
+      262
+    ],
+    "rocco marcucci": [
+      263
+    ],
+    "walter di primio": [
+      266
+    ],
+    "michele muratore": [
+      267
+    ],
+    "marina muratore": [
+      268
+    ],
+    "francesca belfiglio": [
+      269
+    ],
+    "venturino febbo": [
+      270
+    ],
+    "giovannina tirotta": [
+      271
+    ],
+    "federica di primio": [
+      272
+    ],
+    "claudia petrarca": [
+      273
+    ],
+    "quintino bucci": [
+      275
+    ],
+    "daniela d artista": [
+      276
+    ],
+    "annamaria cerquone": [
+      277
+    ]
+  }
+}

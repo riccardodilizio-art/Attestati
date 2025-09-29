@@ -1,0 +1,670 @@
+{
+  "by_bib": {
+    "77": 1,
+    "26": 2,
+    "100": 3,
+    "87": 4,
+    "30": 5,
+    "6": 6,
+    "182": 7,
+    "28": 8,
+    "42": 9,
+    "157": 10,
+    "88": 11,
+    "25": 12,
+    "3": 13,
+    "48": 14,
+    "73": 15,
+    "7": 16,
+    "4": 17,
+    "61": 18,
+    "74": 19,
+    "72": 20,
+    "81": 21,
+    "147": 22,
+    "63": 23,
+    "106": 24,
+    "37": 25,
+    "32": 26,
+    "9": 27,
+    "173": 28,
+    "177": 29,
+    "36": 30,
+    "18": 31,
+    "155": 32,
+    "97": 33,
+    "44": 34,
+    "120": 35,
+    "70": 36,
+    "90": 37,
+    "101": 38,
+    "108": 39,
+    "27": 40,
+    "98": 41,
+    "57": 42,
+    "133": 43,
+    "53": 44,
+    "24": 45,
+    "167": 46,
+    "115": 47,
+    "62": 48,
+    "84": 49,
+    "179": 50,
+    "92": 51,
+    "38": 52,
+    "172": 53,
+    "107": 54,
+    "54": 55,
+    "33": 56,
+    "8": 57,
+    "14": 58,
+    "66": 59,
+    "51": 60,
+    "5": 61,
+    "123": 62,
+    "170": 63,
+    "15": 64,
+    "75": 65,
+    "34": 66,
+    "13": 67,
+    "166": 68,
+    "160": 69,
+    "91": 70,
+    "67": 71,
+    "31": 72,
+    "47": 73,
+    "159": 74,
+    "112": 75,
+    "11": 76,
+    "96": 77,
+    "118": 78,
+    "111": 79,
+    "99": 80,
+    "71": 81,
+    "124": 82,
+    "180": 83,
+    "103": 84,
+    "85": 85,
+    "39": 86,
+    "93": 87,
+    "144": 88,
+    "10": 89,
+    "60": 90,
+    "82": 91,
+    "178": 92,
+    "176": 93,
+    "146": 94,
+    "105": 95,
+    "109": 96,
+    "151": 97,
+    "64": 98,
+    "156": 99,
+    "79": 100,
+    "140": 101,
+    "65": 102,
+    "2": 103,
+    "95": 104,
+    "164": 105,
+    "165": 106,
+    "137": 107,
+    "29": 108,
+    "52": 109,
+    "162": 110,
+    "110": 111,
+    "130": 112,
+    "158": 113,
+    "12": 114,
+    "181": 115,
+    "43": 116,
+    "59": 117,
+    "86": 118,
+    "94": 119,
+    "83": 120,
+    "104": 121,
+    "49": 122,
+    "171": 123,
+    "76": 124,
+    "161": 125,
+    "55": 126,
+    "122": 127,
+    "21": 128,
+    "114": 129,
+    "126": 130,
+    "46": 131,
+    "45": 132,
+    "40": 133,
+    "68": 134,
+    "143": 135,
+    "127": 136,
+    "129": 137,
+    "139": 138,
+    "89": 139,
+    "35": 140,
+    "80": 141,
+    "132": 142,
+    "113": 143,
+    "136": 144,
+    "58": 145,
+    "138": 146,
+    "41": 147,
+    "163": 148,
+    "20": 149,
+    "56": 150,
+    "22": 151,
+    "17": 152,
+    "50": 153,
+    "16": 154,
+    "121": 155,
+    "142": 156,
+    "134": 157,
+    "116": 158,
+    "125": 159,
+    "168": 160,
+    "175": 161,
+    "145": 162,
+    "117": 163,
+    "169": 164,
+    "23": 165,
+    "1": 166
+  },
+  "by_name": {
+    "gianluca squadroni": [
+      1
+    ],
+    "giorgio lampa": [
+      2
+    ],
+    "niccolo rossetti": [
+      3
+    ],
+    "leonardo doria": [
+      4
+    ],
+    "matteo collini": [
+      5
+    ],
+    "luigi del buono": [
+      6
+    ],
+    "sina ghorbanalirad": [
+      7
+    ],
+    "giorgio raco": [
+      8
+    ],
+    "michele martufi": [
+      9
+    ],
+    "claudio tanzi": [
+      10
+    ],
+    "azzurra ilari": [
+      11
+    ],
+    "simone cardinaletti": [
+      12
+    ],
+    "andrea badiali": [
+      13
+    ],
+    "giorgio trape": [
+      14
+    ],
+    "nicolas moglie": [
+      15
+    ],
+    "vincenzo guerrieri": [
+      16
+    ],
+    "gabriele bonazza": [
+      17
+    ],
+    "pierpaolo pacioni": [
+      18
+    ],
+    "ilaria sabbatini": [
+      19
+    ],
+    "marica melatini": [
+      20
+    ],
+    "paolo capriotti": [
+      21
+    ],
+    "francesco noviello": [
+      22
+    ],
+    "raul frolla": [
+      23
+    ],
+    "francesco zallocco": [
+      24
+    ],
+    "gionni bisconti": [
+      25
+    ],
+    "luigi vagnoli": [
+      26
+    ],
+    "denise tappata": [
+      27
+    ],
+    "greta negro": [
+      28
+    ],
+    "stefano bonaccorsi": [
+      29
+    ],
+    "giordano bisconti": [
+      30
+    ],
+    "elia manzotti": [
+      31
+    ],
+    "alessandro donati": [
+      32
+    ],
+    "mauro perlini": [
+      33
+    ],
+    "matteo pirro": [
+      34
+    ],
+    "enrico orazi": [
+      35
+    ],
+    "beatrice costantini": [
+      36
+    ],
+    "domenico maio": [
+      37
+    ],
+    "alberto rossi": [
+      38
+    ],
+    "simone gasparini": [
+      39
+    ],
+    "renzo conigli": [
+      40
+    ],
+    "fabio perugini": [
+      41
+    ],
+    "luca platani": [
+      42
+    ],
+    "michael mari": [
+      43
+    ],
+    "serena alessiani": [
+      44
+    ],
+    "luca paesani": [
+      45
+    ],
+    "cecilia calvigioni": [
+      46
+    ],
+    "alberto virgili": [
+      47
+    ],
+    "alessandro toscana": [
+      48
+    ],
+    "ricardo enrique dalinson": [
+      49
+    ],
+    "luca parati": [
+      50
+    ],
+    "elena melis": [
+      51
+    ],
+    "luca capparuccini": [
+      52
+    ],
+    "massimo bettin": [
+      53
+    ],
+    "gloria camilletti": [
+      54
+    ],
+    "sara marilungo": [
+      55
+    ],
+    "stefano bianconi": [
+      56
+    ],
+    "giannetto mainardi": [
+      57
+    ],
+    "stefano grottini": [
+      58
+    ],
+    "ivan grossi": [
+      59
+    ],
+    "jacopo isidori": [
+      60
+    ],
+    "massimiliano casaccia": [
+      61
+    ],
+    "paolo brilloni": [
+      62
+    ],
+    "matteo palmieri": [
+      63
+    ],
+    "mauro bugari": [
+      64
+    ],
+    "enrico luchetta": [
+      65
+    ],
+    "pasquale iezzi": [
+      66
+    ],
+    "alice graciotti": [
+      67
+    ],
+    "daniele baroni": [
+      68
+    ],
+    "daniele pradarelli": [
+      69
+    ],
+    "mirco maurizi": [
+      70
+    ],
+    "giorgio marilungo": [
+      71
+    ],
+    "rita mascitti": [
+      72
+    ],
+    "giuseppe ribichini": [
+      73
+    ],
+    "andrea governatori": [
+      74
+    ],
+    "franco compagnucci": [
+      75
+    ],
+    "giacomo falappa": [
+      76
+    ],
+    "simone pancotto": [
+      77
+    ],
+    "mariol llupo": [
+      78
+    ],
+    "fabiano micucci": [
+      79
+    ],
+    "luca perugini": [
+      80
+    ],
+    "micaela melatini": [
+      81
+    ],
+    "emanuele buccioni": [
+      82
+    ],
+    "giuseppe talesi": [
+      83
+    ],
+    "simone sbaffoni": [
+      84
+    ],
+    "pietro protassio de gaetani": [
+      85
+    ],
+    "paolo galli": [
+      86
+    ],
+    "renzo mengoni": [
+      87
+    ],
+    "leonardo valori": [
+      88
+    ],
+    "domenico palumbo": [
+      89
+    ],
+    "laura amaranti": [
+      90
+    ],
+    "mirko castellani": [
+      91
+    ],
+    "felice carfagno": [
+      92
+    ],
+    "giacomo schiavoni": [
+      93
+    ],
+    "roberto gioia": [
+      94
+    ],
+    "marco senesi": [
+      95
+    ],
+    "cristiano sciamanna": [
+      96
+    ],
+    "mauro covarelli": [
+      97
+    ],
+    "quinto perugini": [
+      98
+    ],
+    "federica mancinelli": [
+      99
+    ],
+    "enrico alessandrini": [
+      100
+    ],
+    "valentina stronati": [
+      101
+    ],
+    "matteo biella": [
+      102
+    ],
+    "paola frontini": [
+      103
+    ],
+    "michel moscatelli": [
+      104
+    ],
+    "luca liberatore": [
+      105
+    ],
+    "salvatore coppola": [
+      106
+    ],
+    "claudia pagnanini": [
+      107
+    ],
+    "claudio polini": [
+      108
+    ],
+    "marcello osso": [
+      109
+    ],
+    "francesco fabbretti": [
+      110
+    ],
+    "federico mataloni": [
+      111
+    ],
+    "francesco leombruno": [
+      112
+    ],
+    "giorgio gargamelli": [
+      113
+    ],
+    "francesca frulla": [
+      114
+    ],
+    "paolo fiorucci": [
+      115
+    ],
+    "giorgio papa": [
+      116
+    ],
+    "matteo rossetti": [
+      117
+    ],
+    "robertino dichiara": [
+      118
+    ],
+    "sonia mobili": [
+      119
+    ],
+    "gabriele cerqueti": [
+      120
+    ],
+    "paola sbergami": [
+      121
+    ],
+    "renzo fie": [
+      122
+    ],
+    "mauro cataldi": [
+      123
+    ],
+    "alessandro menichelli": [
+      124
+    ],
+    "antonio girolometti": [
+      125
+    ],
+    "gabriele meconi": [
+      126
+    ],
+    "anna autiero": [
+      127
+    ],
+    "sergio strappato": [
+      128
+    ],
+    "erika maurelli": [
+      129
+    ],
+    "lorenzo corsi": [
+      130
+    ],
+    "catiuscia ramadori": [
+      131
+    ],
+    "edelwais pistilli": [
+      132
+    ],
+    "emiliano marcazzan": [
+      133
+    ],
+    "marco vallati": [
+      134
+    ],
+    "ylenia vallorani": [
+      135
+    ],
+    "irene di cianni": [
+      136
+    ],
+    "tiziana gaetani": [
+      137
+    ],
+    "alessandra pizzarulli": [
+      138
+    ],
+    "luigi macellari": [
+      139
+    ],
+    "francesco amore": [
+      140
+    ],
+    "filomena angiolillo": [
+      141
+    ],
+    "alessio marchetti": [
+      142
+    ],
+    "simona lucaioli": [
+      143
+    ],
+    "serena mozzorecchia": [
+      144
+    ],
+    "roberta rocchi": [
+      145
+    ],
+    "annamaria perrotta": [
+      146
+    ],
+    "laura marchionni": [
+      147
+    ],
+    "giuseppe falco": [
+      148
+    ],
+    "giuseppe raponi": [
+      149
+    ],
+    "enrico orienti": [
+      150
+    ],
+    "federico giacomini": [
+      151
+    ],
+    "mario luigi labianca": [
+      152
+    ],
+    "sante isidori": [
+      153
+    ],
+    "chiarina d alonzo": [
+      154
+    ],
+    "simone pranzetti": [
+      155
+    ],
+    "veronica vallesi": [
+      156
+    ],
+    "roberta menghini": [
+      157
+    ],
+    "rachela censi": [
+      158
+    ],
+    "maria teresa celino": [
+      159
+    ],
+    "giuseppe campanari": [
+      160
+    ],
+    "stella renzi": [
+      161
+    ],
+    "marco vannini": [
+      162
+    ],
+    "federica pocognoli": [
+      163
+    ],
+    "valentina dalponte tindara": [
+      164
+    ],
+    "giordano giacomini": [
+      165
+    ],
+    "eleonora barontini": [
+      166
+    ]
+  }
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestione attestati (admin)</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f0f0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .login-card { width: 420px; margin: 50px auto; text-align: center; }
+        input[type="text"], input[type="password"], input[type="file"] { width: 100%; padding: .6rem; margin: .5rem 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { background: #28a745; color: white; border: none; padding: .6rem 1.2rem; font-size: 1rem; border-radius: 6px; cursor: pointer; margin: .5rem 0; }
+        button:hover { background: #218838; }
+        button.logout { background: #dc3545; float: right; }
+        button.logout:hover { background: #c82333; }
+        .msg { margin-top: 1rem; font-weight: bold; white-space: pre-wrap; }
+        .gare-list { margin-top: 1rem; }
+        .gara-item { padding: 10px; margin: 6px 0; background: #f8f9fa; border-radius: 6px; border-left: 4px solid #007bff; }
+        .hidden { display: none; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: .5rem; font-weight: bold; }
+        .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:6px; }
+        .ok { background:#e6ffed; color:#036b26; border:1px solid #b7f5c7; }
+        .no { background:#ffecec; color:#8a1f11; border:1px solid #ffc2bf; }
+        .muted { color:#666; font-size:.9rem; }
+        .spinner { display:inline-block; width:16px; height:16px; border:2px solid #ccc; border-top-color:#333; border-radius:50%; animation: spin 1s linear infinite; vertical-align:middle; margin-left:6px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @media (max-width: 600px) {
+            .card { padding: 1rem; }
+            input, button { font-size: .9rem; }
+        }
+    </style>
+</head>
+<body>
+<!-- Login -->
+<div id="loginSection" class="card login-card">
+    <h2>Login Amministratore</h2>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Inserisci username" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Inserisci password" />
+    </div>
+    <button onclick="login()">Accedi</button>
+    <div id="loginMsg" class="msg"></div>
+    <div class="muted" id="healthzMsg"></div>
+</div>
+
+<!-- Admin -->
+<div id="adminSection" class="container hidden">
+    <div class="card">
+        <h2>Gestione Attestati</h2>
+        <button class="logout" onclick="logout()">Logout</button>
+        <div style="clear: both;"></div>
+        <div class="muted" id="tokenPreview"></div>
+    </div>
+
+    <div class="card">
+        <h3>Carica nuovo PDF attestati</h3>
+        <div class="form-group">
+            <label for="garaId">ID Gara (es: maratona_2024, corsa_10km):</label>
+            <input type="text" id="garaId" placeholder="Inserisci ID gara (solo lettere, numeri e underscore)" />
+        </div>
+        <div class="form-group">
+            <label for="pdfFile">File PDF:</label>
+            <input type="file" id="pdfFile" accept="application/pdf" />
+            <div class="muted">Max consigliato lato client: 50MB</div>
+            <div id="filePreview" class="muted"></div>
+        </div>
+        <button onclick="upload()">Carica e Indicizza</button>
+        <div id="uploadMsg" class="msg"></div>
+    </div>
+
+    <div class="card">
+        <h3>Gare Disponibili</h3>
+        <button onclick="caricaGare()">Aggiorna Lista</button>
+        <div id="gareList" class="gare-list"></div>
+    </div>
+</div>
+
+<script>
+    let authToken = localStorage.getItem('authToken');
+    let refreshToken = localStorage.getItem('refreshToken');
+
+    // Health check
+    (async () => {
+        try {
+            const r = await fetch('/healthz');
+            document.getElementById('healthzMsg').textContent =
+                r.ok ? 'Backend online ✓' : 'Backend non raggiungibile';
+        } catch {
+            document.getElementById('healthzMsg').textContent = 'Backend non raggiungibile';
+        }
+    })();
+
+    if (authToken) mostraAdmin();
+
+    async function login() {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const msg = document.getElementById('loginMsg');
+
+        if (!username || !password) {
+            msg.textContent = "Inserisci username e password.";
+            msg.style.color = "red";
+            return;
+        }
+        msg.textContent = "Accesso in corso… ⏳";
+        msg.style.color = "#333";
+
+        try {
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ username, password })
+            });
+            const data = await res.json();
+
+            if (res.ok && data.access_token) {
+                authToken = data.access_token;
+                refreshToken = data.refresh_token;
+                localStorage.setItem('authToken', authToken);
+                localStorage.setItem('refreshToken', refreshToken);
+                msg.textContent = "Login effettuato ✓";
+                msg.style.color = "green";
+                mostraAdmin();
+            } else {
+                msg.textContent = data.msg || data.error || "Errore di login";
+                msg.style.color = "red";
+            }
+        } catch (error) {
+            msg.textContent = "Errore di connessione al server";
+            msg.style.color = "red";
+        }
+    }
+
+    function logout() {
+        authToken = null;
+        refreshToken = null;
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('refreshToken');
+        document.getElementById('loginSection').classList.remove('hidden');
+        document.getElementById('adminSection').classList.add('hidden');
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('loginMsg').textContent = '';
+    }
+
+    function mostraAdmin() {
+        document.getElementById('loginSection').classList.add('hidden');
+        document.getElementById('adminSection').classList.remove('hidden');
+        const t = (authToken || '');
+        document.getElementById('tokenPreview').textContent = t ? ('Token: ' + t.slice(0,16) + '…') : 'Nessun token';
+        caricaGare();
+    }
+
+    async function refresh() {
+        if (!refreshToken) return;
+        try {
+            const res = await fetch('/api/auth/refresh', {
+                method: 'POST',
+                headers: { 'Authorization': `Bearer ${refreshToken}` }
+            });
+            if (res.ok) {
+                const data = await res.json();
+                authToken = data.access_token;
+                localStorage.setItem('authToken', authToken);
+                document.getElementById('tokenPreview').textContent = 'Token refresh ✓ ' + authToken.slice(0,16) + '…';
+            } else {
+                logout();
+            }
+        } catch {
+            logout();
+        }
+    }
+
+    setInterval(refresh, 10 * 60 * 1000); // refresh ogni 10 minuti
+
+    async function upload() {
+        const garaId = document.getElementById("garaId").value.trim();
+        const fileInput = document.getElementById("pdfFile");
+        const msg = document.getElementById("uploadMsg");
+
+        msg.textContent = "";
+        if (!authToken) {
+            msg.textContent = "Non autenticato. Esegui il login.";
+            msg.style.color = "red";
+            return;
+        }
+        if (!garaId) {
+            msg.textContent = "Inserisci l'ID della gara.";
+            msg.style.color = "red";
+            return;
+        }
+        if (!/^[a-zA-Z0-9_]+$/.test(garaId)) {
+            msg.textContent = "ID gara non valido.";
+            msg.style.color = "red";
+            return;
+        }
+        if (!fileInput.files.length) {
+            msg.textContent = "Seleziona un file PDF.";
+            msg.style.color = "red";
+            return;
+        }
+
+        const file = fileInput.files[0];
+        const MAX_MB = 50;
+        if (file.size > MAX_MB * 1024 * 1024) {
+            msg.textContent = `File troppo grande (> ${MAX_MB}MB).`;
+            msg.style.color = "red";
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("gara_id", garaId);
+
+        msg.innerHTML = "Caricamento in corso… <span class='spinner'></span>";
+        msg.style.color = "#333";
+
+        try {
+            const res = await fetch("/api/attestati/upload", {
+                method: "POST",
+                headers: { 'Authorization': `Bearer ${authToken}` },
+                body: formData
+            });
+
+            const data = await res.json().catch(() => ({}));
+
+            if (res.ok) {
+                msg.textContent = (data.message || 'Upload completato') + ` (bib: ${data.totale_bib ?? '?'}, nomi: ${data.totale_nomi ?? '?'})`;
+                msg.style.color = "green";
+                document.getElementById("garaId").value = '';
+                document.getElementById("pdfFile").value = '';
+                document.getElementById("filePreview").textContent = '';
+                setTimeout(caricaGare, 800);
+            } else {
+                if (res.status === 401) {
+                    msg.textContent = "Non autorizzato (401). Rifai il login.";
+                    msg.style.color = "red";
+                    logout();
+                    return;
+                }
+                msg.textContent = `Errore ${res.status}: ${data.error || data.msg || 'Upload fallito'}`;
+                msg.style.color = "red";
+            }
+        } catch (err) {
+            msg.textContent = "Errore durante il caricamento: " + err.message;
+            msg.style.color = "red";
+        }
+    }
+
+    async function caricaGare() {
+        const gareList = document.getElementById('gareList');
+        gareList.innerHTML = '<span class="muted">Caricamento… <span class="spinner"></span></span>';
+        try {
+            const res = await fetch('/api/attestati/gare');
+            const data = await res.json();
+            if (Array.isArray(data.gare) && data.gare.length) {
+                gareList.innerHTML = data.gare.map(g => `
+          <div class="gara-item">
+            <strong>${g.nome}</strong> <span class="muted">(ID: ${g.id})</span><br>
+            PDF: ${g.pdf_caricato ? '<span class="pill ok">caricato</span>' : '<span class="pill no">manca</span>'}
+            Indice: ${g.indice_creato ? '<span class="pill ok">presente</span>' : '<span class="pill no">manca</span>'}
+          </div>
+        `).join('');
+            } else {
+                gareList.innerHTML = '<p>Nessuna gara disponibile.</p>';
+            }
+        } catch {
+            gareList.innerHTML = '<p>Errore nel caricamento delle gare.</p>';
+        }
+    }
+
+    // Preview file selezionato
+    document.getElementById("pdfFile").addEventListener("change", e => {
+        const f = e.target.files[0];
+        document.getElementById("filePreview").textContent = f ? `Selezionato: ${f.name} (${(f.size/1024/1024).toFixed(1)} MB)` : '';
+    });
+
+    // Enter per login
+    document.getElementById('password').addEventListener('keypress', e => {
+        if (e.key === 'Enter') login();
+    });
+</script>
+</body>
+</html>

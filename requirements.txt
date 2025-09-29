@@ -1,0 +1,17 @@
+# Core
+Flask==2.3.3
+Flask-Cors==4.0.0
+Flask-JWT-Extended==4.6.0
+
+# PDF handling
+PyMuPDF==1.23.6
+
+# Utils
+Werkzeug==2.3.7
+Unidecode==1.3.6
+
+# Proxy support (per Nginx/Heroku)
+Werkzeug[proxyfix]==2.3.7
+
+# Opzionali (logging migliorato)
+python-dotenv==1.0.0

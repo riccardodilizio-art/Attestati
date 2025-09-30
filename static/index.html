@@ -213,16 +213,18 @@
                     setMessage("Nessun risultato trovato.", "error");
                     return;
                 }
-                setMessage("Trovate più corrispondenze. Seleziona la tua:", "success");
+
+                // Mostra solo i nomi (senza scaricare PDF)
+                setMessage("Risultato trovato:", "success");
                 resultsBox.innerHTML = data.risultati.map((r, i) => `
-          <div class="result-item">
-            <strong>Risultato ${i+1}</strong> – Pagina ${r.page} —
-            <a href="${r.download}" download="attestato_${sanitizeFilename(garaId)}_${sanitizeFilename(query)}_p${r.page}.pdf">Scarica</a>
-          </div>
-        `).join('');
+      <div class="result-item">
+        <strong>${r.nome || 'Partecipante ' + (i + 1)}</strong><br>
+        Pettorale: ${r.bib ?? '-'}<br>
+        Pagina: ${r.page}
+      </div>
+    `).join('');
                 return;
             }
-
             if (data && (data.error || data.msg)) {
                 throw new Error(data.error || data.msg);
             } else {

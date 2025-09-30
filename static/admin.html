@@ -254,7 +254,7 @@
 
     async function caricaGare() {
         const gareList = document.getElementById('gareList');
-        gareList.innerHTML = '<span class="muted">Caricamento… <span class="spinner"></span></span>';
+        gareList.innerHTML = '<span class="muted">Caricamento…</span>';
         try {
             const res = await fetch('/api/attestati/gare');
             const data = await res.json();
@@ -264,15 +264,49 @@
             <strong>${g.nome}</strong> <span class="muted">(ID: ${g.id})</span><br>
             PDF: ${g.pdf_caricato ? '<span class="pill ok">caricato</span>' : '<span class="pill no">manca</span>'}
             Indice: ${g.indice_creato ? '<span class="pill ok">presente</span>' : '<span class="pill no">manca</span>'}
+            <button class="delete" onclick="eliminaGara('${g.id}')">🗑️ Elimina</button>
           </div>
         `).join('');
             } else {
                 gareList.innerHTML = '<p>Nessuna gara disponibile.</p>';
             }
-        } catch {
+        } catch (error) {
             gareList.innerHTML = '<p>Errore nel caricamento delle gare.</p>';
         }
     }
+
+    async function eliminaGara(garaId) {
+        if (!authToken) {
+            alert("Non autenticato. Fai login prima.");
+            return;
+        }
+        if (!confirm(`Vuoi davvero eliminare la gara '${garaId}'?`)) return;
+
+        try {
+            const res = await fetch('/api/attestati/delete', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${authToken}`
+                },
+                body: JSON.stringify({ gara_id: garaId })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                alert(data.message);
+                caricaGare();
+            } else {
+                alert(data.error || 'Errore durante l\'eliminazione');
+            }
+        } catch (err) {
+            alert('Errore di connessione: ' + err.message);
+        }
+    }
+
+    // Enter per login
+    document.getElementById('password').addEventListener('keypress', e => {
+        if (e.key === 'Enter') login();
+    });
 
     // Preview file selezionato
     document.getElementById("pdfFile").addEventListener("change", e => {

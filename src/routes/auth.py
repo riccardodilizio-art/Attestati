@@ -3,6 +3,7 @@ import os
 import logging
 from datetime import timedelta, timezone, datetime
 from flask import Blueprint, request, jsonify
+from flask_cors import cross_origin
 from flask_jwt_extended import (
     create_access_token,
     create_refresh_token,
@@ -11,6 +12,8 @@ from flask_jwt_extended import (
     jwt_required,
 )
 from werkzeug.security import check_password_hash, generate_password_hash
+
+from Attestati.src.routes.attestati import get_gara_folder, attestati_bp
 
 auth_bp = Blueprint("auth", __name__)
 
@@ -137,3 +140,23 @@ def register_jwt_callbacks(jwt):
     @jwt.revoked_token_loader
     def revoked_token_callback(jwt_header, jwt_payload):
         return jsonify({"status": "error", "message": "Token revocato"}), 401
+
+@attestati_bp.route("/delete", methods=["POST"])
+@cross_origin()
+@jwt_required()
+def delete_gara():
+    data = request.get_json(silent=True) or {}
+    gara_id = (data.get("gara_id") or "").strip()
+    if not gara_id:
+        return jsonify({"error": "ID gara richiesto"}), 400
+
+    gara_folder = get_gara_folder(gara_id)
+    if not os.path.exists(gara_folder):
+        return jsonify({"error": f"Gara '{gara_id}' non trovata"}), 404
+
+    try:
+        import shutil
+        shutil.rmtree(gara_folder)
+        return jsonify({"message": f"Gara '{gara_id}' eliminata con successo"}), 200
+    except Exception as e:
+        return jsonify({"error": f"Errore durante l'eliminazione: {e}"}), 500

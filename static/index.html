@@ -192,15 +192,19 @@
                 }
                 setMessage("Risultato trovato:", "success");
                 resultsBox.innerHTML = data.risultati.map((r, i) => `
-                  <div class="result-item">
-                    <strong>${r.nome || 'Partecipante ' + (i+1)}</strong><br>
-                    Pettorale: ${r.bib ?? '-'}<br>
-                    Pagina: ${r.page}
-                  </div>
-                `).join('');
-                document.getElementById('query').value = '';
+      <div class="result-item">
+        <strong>${r.nome || 'Partecipante ' + (i+1)}</strong><br>
+        Pettorale: ${r.bib || '-'}<br>
+        Pagina: ${r.page}<br>
+        <a href="${r.download}" target="_blank"
+           download="attestato_${sanitizeFilename(garaId)}_${sanitizeFilename(r.nome || query)}.pdf">
+           📄 Scarica attestato
+        </a>
+      </div>
+    `).join('');
                 return;
             }
+
 
             if (data && (data.error || data.msg)) {
                 throw new Error(data.error || data.msg);

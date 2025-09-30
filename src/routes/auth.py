@@ -12,8 +12,8 @@ from flask_jwt_extended import (
     jwt_required,
 )
 from werkzeug.security import check_password_hash, generate_password_hash
+from src.routes.attestati import get_gara_folder, attestati_bp
 
-from Attestati.src.routes.attestati import get_gara_folder, attestati_bp
 
 auth_bp = Blueprint("auth", __name__)
 

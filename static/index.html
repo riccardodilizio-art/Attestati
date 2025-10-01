@@ -183,34 +183,44 @@
         try {
             const params = new URLSearchParams({ gara_id: garaId, query });
             const res = await fetch(`/api/attestati/cerca?${params.toString()}`);
-            const data = await res.json().catch(() => null);
+            const contentType = res.headers.get('content-type') || "";
 
-            if (res.ok && data && Array.isArray(data.risultati)) {
+            if (contentType.includes('application/json')) {
+            const data = await res.json();
+
+            if (res.ok && Array.isArray(data.risultati)) {
                 if (!data.risultati.length) {
                     setMessage("Nessun risultato trovato.", "error");
                     return;
                 }
                 setMessage("Risultato trovato:", "success");
                 resultsBox.innerHTML = data.risultati.map((r, i) => `
-      <div class="result-item">
-        <strong>${r.nome || 'Partecipante ' + (i+1)}</strong><br>
-        Pettorale: ${r.bib || '-'}<br>
-        Pagina: ${r.page}<br>
-        <a href="${r.download}" target="_blank"
-           download="attestato_${sanitizeFilename(garaId)}_${sanitizeFilename(r.nome || query)}.pdf">
-           📄 Scarica attestato
-        </a>
-      </div>
-    `).join('');
+                    <div class="result-item">
+                        <strong>${r.nome || 'Partecipante ' + (i+1)}</strong><br>
+                        Pettorale: ${r.bib || '-'}<br>
+                        Pagina: ${r.page}<br>
+                        <a href="${r.download}" target="_blank"
+                            download="attestato_${sanitizeFilename(garaId)}_${sanitizeFilename(r.nome || query)}.pdf">
+                            📄 Scarica attestato
+                        </a>
+                    </div>
+                `).join('');
                 return;
             }
 
-
-            if (data && (data.error || data.msg)) {
-                throw new Error(data.error || data.msg);
-            } else {
-                const rawText = await res.text();
-                throw new Error(rawText || "Errore nella ricerca");
+            throw new Error(data.error || data.msg || 'Errore nella ricerca');
+            } else if(contentType.includes('application/pdf')) {
+                const blob = await res.blob();
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${sanitizeFilename(garaId)}_${sanitizeFilename(query)}.pdf`;
+                a.click()
+                URL.revokeObjectURL(url);
+                setMessage("Attestato scaricato con successo", "success");
+                return;
+            }else {
+                throw new Error('Errore nella ricerca');
             }
         } catch (err) {
             setMessage(err.message, "error");
@@ -218,11 +228,6 @@
             setLoading(false);
         }
     }
-
-    document.addEventListener('DOMContentLoaded', caricaGare);
-    document.getElementById('query').addEventListener('keypress', e => {
-        if (e.key === 'Enter' && !document.getElementById('cercaBtn').disabled) cerca();
-    });
 </script>
 </body>
 </html>
